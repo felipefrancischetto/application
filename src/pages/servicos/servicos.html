@@ -1,0 +1,38 @@
+<ion-header>
+  <navbar [titlePage]='title'></navbar>
+  <ion-toolbar color="white">
+    <ion-segment>
+      <ion-segment-button class="chamado-segment" value="hoje">
+        pendentes
+      </ion-segment-button>
+      <ion-segment-button class="chamado-segment" value="proximos">
+        em execução
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-fab right bottom>
+      <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+      <ion-fab-list side="left">
+        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+
+  <ion-card *ngFor="let client of clients" >
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/icon/company.svg">
+        </ion-avatar>
+        <h2>{{ client.nome }}</h2>
+        <p>{{ client.endereco }}</p>
+      </ion-item>
+
+  </ion-card>
+
+</ion-content>

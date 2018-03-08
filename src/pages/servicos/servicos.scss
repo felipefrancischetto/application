@@ -1,0 +1,27 @@
+.chamado-segment {
+  color: #039EF2 !important;
+  .segment-md .segment-button.activated,
+  .segment-md .segment-button.segment-activated {
+  }
+}
+
+servicos {
+  ion-toolbar {
+    padding: 0 !important;
+    margin: 0 !important;
+    ion-segment {
+
+      ion-segment-button {
+        padding: 0 !important;
+        margin-bottom: -10px !important;
+      }
+    }
+  }
+
+  ion-item {
+    h2 {
+      color: #666 !important;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+}

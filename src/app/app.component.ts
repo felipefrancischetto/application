@@ -3,8 +3,11 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { ServicosPage } from '../pages/servicos/servicos';
+import { ServicosConcluidosPage } from '../pages/servicos-concluidos/servicos-concluidos';
+import { PerfilPage } from './../pages/perfil/perfil';
+import { ReembolsosPage } from './../pages/reembolsos/reembolsos';
+import { SuportePage } from '../pages/suporte/suporte';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,18 +15,30 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = ServicosPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+  constructor(public platform: Platform,
+              public statusBar: StatusBar,
+              public splashScreen: SplashScreen) {
+    // this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Serviços', component: ServicosPage, icon: 'md-checkbox' },
+      { title: 'Serviços Concluídos', component: ServicosConcluidosPage, icon: 'md-checkbox' },
+      { title: 'Perfil', component: PerfilPage, icon: 'md-contact' },
+      { title: 'Reembolsos', component: ReembolsosPage, icon: 'logo-usd' },
+      { title: 'Suporte', component: SuportePage, icon: 'md-help-circle' }
     ];
+
+    platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      statusBar.backgroundColorByHexString("#246af9");
+      splashScreen.hide();
+    });
 
   }
 
@@ -31,7 +46,7 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
+      this.statusBar.backgroundColorByHexString('#0E91D8');
       this.splashScreen.hide();
     });
   }
