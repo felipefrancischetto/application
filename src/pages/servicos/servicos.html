@@ -14,15 +14,23 @@
 
 <ion-content>
 
-    <ion-fab right bottom>
-      <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
-      <ion-fab-list side="left">
-        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
-      </ion-fab-list>
-    </ion-fab>
+  <ion-fab right bottom>
+    <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button color="primary" ion-fab>
+        <img src="assets/icon/restaurant.svg">
+      </button>
+      <button ion-fab>
+        <img src="assets/icon/gas-station.svg">
+      </button>
+      <button ion-fab>
+        <img src="assets/icon/company.svg">
+      </button>
+      <button ion-fab>
+        <img src="assets/icon/task.svg">
+      </button>
+    </ion-fab-list>
+  </ion-fab>
 
   <ion-card *ngFor="let client of clients" >
       <ion-item>

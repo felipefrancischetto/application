@@ -3,17 +3,20 @@ import { IonicPageModule } from 'ionic-angular';
 
 import { ServicosPage } from './servicos';
 import { ComponentsModule } from '../../components/components'
+import { NovaAtividadeComponent } from './components/novaAtividade/nova-atividade.component';
 
 @NgModule({
   declarations: [
-    ServicosPage
+    ServicosPage,
+    NovaAtividadeComponent,
   ],
   imports: [
     ComponentsModule,
     IonicPageModule.forChild(ServicosPage)
   ],
   entryComponents: [
-    ServicosPage
+    ServicosPage,
+    NovaAtividadeComponent,
   ]
 })
 

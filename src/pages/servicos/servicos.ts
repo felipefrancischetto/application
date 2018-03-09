@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { NovaAtividadeComponent } from './components/novaAtividade/nova-atividade.component';
+
 @Component({
   selector: 'servicos',
   templateUrl: 'servicos.html'
@@ -16,6 +18,10 @@ export class ServicosPage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  AbrirNovaAtividade() {
+    this.navCtrl.push(NovaAtividadeComponent);
   }
 
 }
